@@ -1,0 +1,80 @@
+\documentclass[12.0pt,letterpaper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{8pt}
+
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black}
+
+\setlist[itemize]{
+    leftmargin=0.18in,
+    itemsep=2pt,
+    topsep=2pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+% Reusable command for a job/position header: Title (bold) ... dates (right), italic subtitle line below
+\newcommand{\entryheader}[3]{%
+    \textbf{#1} \hfill #2\\
+    \textit{#3}
+}
+
+\begin{document}
+\begin{center}
+    {\LARGE\textbf{LEANDER TENBARGE}}\\[4pt]
+    \href{mailto:Ltenbarge42@tntech.edu}{Ltenbarge42@tntech.edu} $\mid$
+    615-784-5368 $\mid$
+    Cookeville, TN $\mid$
+    \href{https://www.linkedin.com/in/leandertenbarge/}{LinkedIn} $\mid$
+    \href{https://github.com/LeanderTenbarge}{Github}
+\end{center}
+\vspace{15pt}
+
+\section*{EDUCATION}
+\textbf{Tennessee Technological University}, Cookeville, TN\\
+B.S., Mechanical Engineering --- GPA: 3.62 \hfill Aug 2022 -- May 2026\\
+Ph.D. Student, Mechanical Engineering \hfill Aug 2026 -- Present
+
+\section*{SKILLS}
+\textbf{Engineering Software:} SolidWorks, ANSYS Fluent, OpenFOAM, Simulink, ParaView, OpenCascade\\
+\textbf{Programming:} C++, MATLAB, Python, Bash\\
+\textbf{Simulation \& HPC:} CFD, Turbulence Modeling (RANS/LES), Programmatic CAD Geometry, Mesh Generation, SLURM HPC, Optimization, Workflow Automation, Visualizations \& Data Analysis
+
+\section*{EXPERIENCE}
+
+\entryheader{Graduate Research Assistant, Dilute Particle Laden Flows}{May 2026 -- Present}{Department of Mechanical Engineering, Tennessee Technological University}
+\vspace{4pt}
+\begin{itemize}
+\item Simulated aerosol transport in curved sampling systems using OpenFOAM and Lagrangian particle tracking, predicting transmission efficiency and concentration non-uniformity to inform experimental design.
+\item Built an automated parametric geometry and meshing pipeline (C++/OpenCascade, GMSH) to support optimization of micro-particle acceleration in supersonic nozzles.
+\item Ran parallel OpenFOAM simulations of particle-laden flows on SLURM clusters and developed C++ tools to trim large binary output, reducing storage and post-processing overhead.
+\end{itemize}
+\vspace{15pt}
+
+\entryheader{Undergraduate Researcher, Aerodynamics}{Dec 2025 -- May 2026}{Department of Mechanical Engineering, Tennessee Technological University}
+\vspace{4pt}
+\begin{itemize}
+        \item Modeled particle-laden flow and erosion over a T106C turbine cascade in OpenFOAM, comparing RANS turbulence models and validating flow-field and erosion predictions against experimental data.
+        
+	\item Built SLURM job-array and Bash pipelines that template OpenFOAM cases and automate meshing, decomposition, solving, and post-processing end to end.
+	\item Built Python workflows (NumPy, pandas, Matplotlib, ParaView scripting) that batch-process OpenFOAM results across parameter sweeps, extracting field and particle data, computing erosion and flow metrics, and generating publication-ready figures.
+	
+\end{itemize}
+\vspace{15pt}
+
+\entryheader{Aerodynamic Design Team Member/Lead}{Aug 2023 -- May 2025}{Formula SAE Design Team, TTU Motorsports}
+\vspace{4pt}
+\begin{itemize}
+\item Led the iterative design of the aerodynamic package for TTU Motorsports' Formula SAE vehicle, coordinating CFD, parametric geometry, and composite structural analysis across the aero subteam.
+\item Developed a parametric aerodynamic design tool in Python that generates spanwise-varying wing geometries (CST, PCHIP) with automated named-region tagging, automating the design-to-CFD workflow through custom input files and eliminating manual CAD geometry creation.
+\item Analyzed thin airfoil skins with Classical Laminate Theory to evaluate failure modes across composite layups, and quantified uncertainty from material properties using Monte Carlo analysis with Latin hypercube sampling to identify critical design parameters and assess structural reliability.
+\end{itemize}
+\end{document}
